@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">osu! Autoplayer</string>
+    <string name="start_autoplayer">Start</string>
+    <string name="pause_autoplayer">Pause</string>
+    <string name="stop_autoplayer">Stop</string>
+    <string name="auto_adjust_judgement_line">Auto Adjust Judgement Line</string>
+    <string name="manual_calibration">Manual Calibration</string>
+    <string name="release_all_inputs">Release All Inputs</string>
+    <string name="settings">Settings</string>
+    <string name="accessibility_service_description">Service for injecting touch inputs to play osu!</string>
+    <string name="permission_explanation">
+        This app requires several permissions to function:
+        \n• MediaProjection: To capture the game screen
+        \n• AccessibilityService: To inject touch inputs
+        \n• SYSTEM_ALERT_WINDOW: To display the floating control overlay
+        \n• FOREGROUND_SERVICE: To maintain processing while in background
+    </string>
+    <string name="capture_resolution">Capture Resolution</string>
+    <string name="processing_frequency">Processing Frequency (FPS)</string>
+    <string name="detection_threshold">Detection Threshold</string>
+    <string name="timing_offset">Timing Offset (ms)</string>
+    <string name="debug_overlay">Debug Overlay</string>
+    <string name="performance_logging">Performance Logging</string>
+    <string name="auto_calibration_enabled">Auto Calibration Enabled</string>
+    <string name="chord_grouping_enabled">Chord Grouping Enabled</string>
+    <string name="velocity_smoothing">Velocity Smoothing</string>
+    <string name="track_expiration_ms">Track Expiration (ms)</string>
+    <string name="hold_tail_detection">Hold Tail Detection</string>
+    <string name="min_hold_duration_ms">Min Hold Duration (ms)</string>
+</resources>

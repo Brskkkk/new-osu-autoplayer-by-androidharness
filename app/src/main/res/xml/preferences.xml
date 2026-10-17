@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Capture Settings">
+        <ListPreference
+            android:key="capture_resolution"
+            android:title="Capture Resolution"
+            android:summary="Resolution for screen capture"
+            android:entries="@array/capture_resolutions"
+            android:entryValues="@array/capture_resolution_values"
+            android:defaultValue="1280x720"/>
+        
+        <SeekBarPreference
+            android:key="processing_frequency"
+            android:title="Processing Frequency (FPS)"
+            android:summary="Frames per second for processing"
+            android:min="5"
+            android:max="60"
+            android:defaultValue="30"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Detection Settings">
+        <SeekBarPreference
+            android:key="detection_threshold"
+            android:title="Detection Threshold"
+            android:summary="Threshold for note detection (0-255)"
+            android:min="0"
+            android:max="255"
+            android:defaultValue="30"/>
+            
+        <SeekBarPreference
+            android:key="timing_offset"
+            android:title="Timing Offset (ms)"
+            android:summary="Input timing offset in milliseconds"
+            android:min="-50"
+            android:max="50"
+            android:defaultValue="0"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Advanced Settings">
+        <SwitchPreferenceCompat
+            android:key="auto_calibration_enabled"
+            android:title="Auto Calibration Enabled"
+            android:summary="Automatically adjust judgement line position"
+            android:defaultValue="true"/>
+        
+        <SwitchPreferenceCompat
+            android:key="chord_grouping_enabled"
+            android:title="Chord Grouping Enabled"
+            android:summary="Group simultaneous notes for chord input"
+            android:defaultValue="true"/>
+            
+        <SeekBarPreference
+            android:key="velocity_smoothing"
+            android:title="Velocity Smoothing"
+            android:summary="Smoothing factor for velocity calculation (0.0-1.0)"
+            android:min="0"
+            android:max="100"
+            android:defaultValue="70"/>
+        
+        <SeekBarPreference
+            android:key="track_expiration_ms"
+            android:title="Track Expiration (ms)"
+            android:summary="How long to keep tracks without new detections"
+            android:min="500"
+            android:max="5000"
+            android:defaultValue="2000"/>
+            
+        <SwitchPreferenceCompat
+            android:key="hold_tail_detection"
+            android:title="Hold Tail Detection"
+            android:summary="Attempt to detect hold note tails"
+            android:defaultValue="true"/>
+            
+        <SeekBarPreference
+            android:key="min_hold_duration_ms"
+            android:title="Min Hold Duration (ms)"
+            android:summary="Minimum duration to consider a valid hold"
+            android:min="50"
+            android:max="1000"
+            android:defaultValue="200"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Display Settings">
+        <SwitchPreferenceCompat
+            android:key="debug_overlay"
+            android:title="Debug Overlay"
+            android:summary="Show detection boxes and tracking information"
+            android:defaultValue="false"/>
+            
+        <SwitchPreferenceCompat
+            android:key="performance_logging"
+            android:title="Performance Logging"
+            android:summary="Log performance metrics to screen"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
